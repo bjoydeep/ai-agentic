@@ -2,8 +2,8 @@
 Explorting agentic workflows
 
 Inspiration from:
-https://www.deeplearning.ai/the-batch/how-agents-can-improve-llm-performance/?ref=dl-staging-website.ghost.io
-https://github.com/langchain-ai/langgraph/tree/c3f6c58e13c09dc4870cb1748f2646dd72444151/examples
+- https://www.deeplearning.ai/the-batch/how-agents-can-improve-llm-performance/?ref=dl-staging-website.ghost.io
+- https://github.com/langchain-ai/langgraph/tree/c3f6c58e13c09dc4870cb1748f2646dd72444151/examples
 
 
 
@@ -13,10 +13,14 @@ https://github.com/langchain-ai/langgraph/tree/c3f6c58e13c09dc4870cb1748f2646dd7
     - `cd to the repo dir`
     - run: 
         ```
-        python -m venv .venv
-        source .venv/bin/activate
+        python -m venv .venv  python -m venv .aiagt
+        source .venv/bin/activate  source .aiagt/bin/activate
         pip install -r requirements.txt
         ```
     - run :`which python` and this show that python is being used from the venv directory
     - after all work is done, to exit the venv, just run: `deactivate`
 1. To run Juyter notebook    
+
+python -m ipykernel install --user --name=.aiagt
+
+
