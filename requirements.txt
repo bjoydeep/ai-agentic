@@ -1,0 +1,16 @@
+ipykernel 
+kubernetes
+prometheus_api_client
+oauthlib
+colorama
+tabulate
+numpy
+graphviz
+langgraph
+tavily-python
+#pygraphviz
+pyautogen
+langchain_community
+langchain_experimental
+langchain_openai
+langchain_core
