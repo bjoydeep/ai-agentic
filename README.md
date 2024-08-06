@@ -13,8 +13,8 @@ Inspiration from:
     - `cd to the repo dir`
     - run: 
         ```
-        python -m venv .venv  python -m venv .aiagt
-        source .venv/bin/activate  source .aiagt/bin/activate
+        python -m venv .aiagt
+        source .aiagt/bin/activate
         pip install -r requirements.txt
         ```
     - run :`which python` and this show that python is being used from the venv directory
