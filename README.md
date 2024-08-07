@@ -34,6 +34,7 @@ As all of you know, answering a question like `What is health of my application 
     1. Are there errors lurking in the pod logs?
     1. What about alerts related to the application?
     1. Is there any SLOs defined?
+    1. Is the cluster on which the application running healthy?
 1. And then all of this needs to be summarized to the binary answer the human brain is looking for.
 
 In short, looking at different screens and bringing this all together in the brain is t best very labor intensive and at worse very complex. 
