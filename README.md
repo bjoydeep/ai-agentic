@@ -26,7 +26,7 @@ python -m ipykernel install --user --name=.aiagt
 
 1. To run the Python app
 
-python -m app.app1.supervisor.entry
+python -m app.compose.app1.supervisor.entry
 
 ## Background
 
@@ -53,6 +53,53 @@ Though there are number of patterns, we start experimenting with the [supervisor
 1. As long the tasks confirm to the Agent API of the framework, we have the full liberty on how to design them. If there are deterministic tasks that need to be there - it can be incorporated. If there are other Algorithms that needs to be called like Causal Reasoning etc - it can be incorporated again. We have a reasonable leeway to fend for hallucinations (in reality its a trade off).
 1. And finally all of this can be summarized to provide a result that can be consumed by a human without too much cognitive burden.
 1. These tasks are probably delivered by different teams in an enterprise. These allows this to be scaled quickly.
+
+## Structure of this Repo
+```
+app/
+│
+├── agents/
+│   ├── __init__.py
+│   ├── appdetect.py
+│   ├── appchangedetect.py
+│   ├── appmetric.py
+│   ├── applog.py
+│   ├── appalert.py
+│   ├── appslo.py
+│   ├── clusterhealth.py
+│   ├── ........
+├── tools/
+│   ├── __init__.py
+│   ├── appdef.py
+│   ├── .....
+├── compose/
+│   ├── __init__.py
+│   ├── app1/
+│       └── __init__.py
+│       └── supervisor/
+│           └── entry.py
+│           └── graph.py
+│           └── supervisor.py
+│           └── __init__.py
+├── config/
+│   ├── __init__.py
+│   └── config.py
+└── __init__.py
+│
+notebooks/
+│   ├── agent-experiment-1.ipynb
+│   ├── ........
+```
+
+1. `notebooks` contain the notebooks used to test concepts out.
+1. `app` contains the agents and tools and the application that is being composed of it. 
+1. Conceptually:
+    1. The `agents` are like generic microservices with `tools`. 
+    1. These can be developed across different teams - `agents` and `tools` are potentially reusable across different applications. 
+    1. Each team uses them and creates their applications under `compose`. 
+    1. In the example above, the application is called `app1`. 
+    1. Likewise there could be `app2` etc that uses different compostion of agents.
+
 
 
 
