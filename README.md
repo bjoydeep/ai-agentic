@@ -9,6 +9,7 @@ Inspiration from:
 
 ## What do you need to run
 1. Clone this repo
+1. create the .env file by copying `env-sample` and updating the values
 1. Setup venv
     - `cd to the repo dir`
     - run: 

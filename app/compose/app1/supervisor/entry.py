@@ -3,8 +3,9 @@ import openai
 from dotenv import load_dotenv, find_dotenv
 from langgraph.graph import END, StateGraph, START
 from langchain_core.messages import AnyMessage, SystemMessage, HumanMessage, AIMessage, ChatMessage
+from datetime import datetime
 
-from app.app1.supervisor.graph import graph_build
+from app.compose.app1.supervisor.graph import graph_build
 
 
 def main() :
@@ -12,11 +13,12 @@ def main() :
     _ = load_dotenv(find_dotenv()) 
     openai.api_key  = os.getenv('OPENAI_API_KEY')
 
+
     graph = graph_build()
 
     thread = {"configurable": {"thread_id": "1"}}
-
-    print("Starting Program......")
+    now = datetime.now()
+    print("Starting Program......", now)
 
         
     for s in graph.stream(

@@ -5,15 +5,14 @@ from langchain_core.agents import AgentAction, AgentFinish
 
 from app.agents.agentstate import AgentState
 from app.tools.appdef import appdef
+from app.agents.prompt import APPDETECT_PROMPT
+from app.config.config import config
 
-APPDETECT_PROMPT = """You are an expert at determining the application name from a query.\
-Find out the application name and just return the application name and nothing else. """
-
-log_state_data = False
 
 def appdetect_node(state: AgentState):
+
     
-    if (log_state_data):
+    if (config.LOG_STATE_DATA):
         print("*************inside appdetect_node********************")
         for key in state:
             print(key," : ",state[key])

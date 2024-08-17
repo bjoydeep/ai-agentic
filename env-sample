@@ -1,0 +1,3 @@
+OPENAI_API_KEY=blahblah
+TAVILY_API_KEY=xyzabc
+LOG_STATE_DATA=False
