@@ -80,6 +80,7 @@ app/
 │           └── entry.py
 │           └── graph.py
 │           └── supervisor.py
+│           └── agentstate.py
 │           └── __init__.py
 ├── config/
 │   ├── __init__.py
@@ -99,6 +100,7 @@ notebooks/
     1. Each team uses them and creates their applications under `compose`. 
     1. In the example above, the application is called `app1`. 
     1. Likewise there could be `app2` etc that uses different compostion of agents.
+    1. Needless to mention all things related to application are under `compose`. Therefore Langgraph compostion, AgentState defintion etc should all be here as they are application specific
 
 
 

@@ -3,7 +3,7 @@ from langchain_core.messages import AnyMessage, SystemMessage, HumanMessage, AIM
 from langgraph.graph import END, StateGraph, MessagesState
 from langchain_core.agents import AgentAction, AgentFinish
 
-from app.agents.agentstate import AgentState
+from app.compose.app1.supervisor.agentstate import AgentState
 #from app.tools.appdef import appdef
 from app.agents.prompt import SUMMARY_PROMPT
 from app.agents.prompt import SUPERVISOR_PROMPT
@@ -71,6 +71,7 @@ def supervisor_chain(state: AgentState):
         value = 'Summary'
         #return {"next": value,"task":state['messages'][0].content }
         content = state['messages'] 
+        # this supervisor itself creates the summary
         messages = [
         SystemMessage(content=SUMMARY_PROMPT.format(content=content)),
         ]

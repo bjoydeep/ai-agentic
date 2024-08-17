@@ -3,7 +3,7 @@ from langchain_core.messages import AnyMessage, SystemMessage, HumanMessage, AIM
 from langgraph.graph import END, StateGraph, MessagesState
 from langchain_core.agents import AgentAction, AgentFinish
 
-from app.agents.agentstate import AgentState
+from app.compose.app1.supervisor.agentstate import AgentState
 from app.tools.appdef import appdef
 from app.agents.prompt import APPDETECT_PROMPT
 from app.config.config import config

@@ -3,7 +3,7 @@ from langchain_core.messages import BaseMessage, HumanMessage
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
 from langgraph.graph import END, StateGraph, START
-from app.agents.agentstate import AgentState
+from app.compose.app1.supervisor.agentstate import AgentState
 from app.agents.appdetect import appdetect_node
 
 from app.agents.appchangedetect import appchangedetect_node
