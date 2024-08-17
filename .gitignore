@@ -1,4 +1,4 @@
-__pycache__/
+**/__pycache__/
 *.pyc
 .DS_Store
 .env
@@ -12,3 +12,4 @@ storage_sql/
 knowledge-loss.ipynb
 langchain-postgres-sqlagent-1.ipynb
 .aiagt/
+notebooks/appmodel_test.ipynb

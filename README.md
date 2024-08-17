@@ -23,6 +23,10 @@ Inspiration from:
 
 python -m ipykernel install --user --name=.aiagt
 
+1. To run the Python app
+
+python -m app.app1.supervisor.entry
+
 ## Background
 
 As all of you know, answering a simple question like `What is the health of my retail banking application` can be at best very labor intensive and at worse very complex. Let us take a look at what does it usually means to be able to answer this:
