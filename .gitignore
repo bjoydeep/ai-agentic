@@ -13,3 +13,4 @@ knowledge-loss.ipynb
 langchain-postgres-sqlagent-1.ipynb
 .aiagt/
 notebooks/appmodel_test.ipynb
+notebooks/*_test.ipynb
